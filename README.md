@@ -104,8 +104,68 @@ Vous expliquerez dans un fichier `REFLEXION.md` :
    `http://127.0.0.1:8000/`
 
 Vous devriez voir :
-> Bienvenue dans l'atelier Django BTS SIO 👨‍💻
+> Bienvenue dans l'atelier Django BTS SIO !
 
 À partir de ce socle, vous implémenterez progressivement les modèles,
 vues, API REST et interfaces nécessaires pour gérer les clients, incidents,
 interventions et pièces jointes.
+
+---
+
+##  Lancer l’application Django une fois connecté à votre classe virtuelle (Codespaces)
+
+Une fois votre Codespace ouvert, vous pouvez lancer votre application Django grâce à cette procédure simple.
+
+### ✔️ 1. Ouvrir un terminal dans Codespaces
+Dans VS Code (fenêtre Codespaces) :
+
+**Terminal → New Terminal**
+
+### ✔️ 2. Appliquer les migrations Django
+Initialise la base de données :
+
+```bash
+python manage.py migrate
+```
+
+### ✔️ 3. Lancer le serveur Django
+Très important : utiliser **0.0.0.0** dans Codespaces :
+
+```bash
+python manage.py runserver 0.0.0.0:8000
+```
+
+### ✔️ 4. Ouvrir votre application Django dans un navigateur
+Codespaces vous proposera automatiquement **Open in Browser**.
+
+Sinon :
+1. Cliquer sur l’onglet **Ports**
+2. Repérer le port **8000**
+3. Cliquer sur **Open in Browser**
+
+→ L’application s’ouvrira dans une URL du type :
+
+```
+https://<identifiant>-8000.app.github.dev/
+```
+
+### ✔️ 5. Résultat attendu
+Vous verrez :
+
+> Bienvenue dans l'atelier Django BTS SIO !
+
+---
+
+###  BON À SAVOIR  
+Chaque fois que vous revenez en classe :
+- ouvrez votre Codespace,
+- ouvrez un terminal,
+- lancez la commande :
+
+```bash
+python manage.py runserver 0.0.0.0:8000
+```
+
+Aucune réinstallation n'est nécessaire : tout est déjà prêt dans votre environnement virtuel.
+
+---
