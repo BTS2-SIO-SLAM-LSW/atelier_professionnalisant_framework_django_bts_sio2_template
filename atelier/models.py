@@ -26,7 +26,7 @@ class Technicien(models.Model):
 
     nom = models.CharField(max_length=100)
     prenom = models.CharField(max_length=100)
-    specialite = models.CharField(max_length=120, choices=SPECIALES, default=DEV)
+    specialite = models.CharField(max_length=120, choices=SPECIALITES, default=DEV)
 
     def __str__(self) -> str:
         return f"{self.prenom} {self.nom}"
